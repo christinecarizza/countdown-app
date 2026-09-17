@@ -1,0 +1,33 @@
+.name-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.name-settings-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.name {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#name {
+    font-family: 'Courier New', monospace;
+    font-weight: 600;
+    font-size: 16px;
+    border: 2px solid #100e0e;
+    border-radius: 6px;
+    padding: 10px 12px;
+    box-sizing: border-box;
+
+    &:focus {
+        outline: none;
+        border-color: #a7a7a7;
+    }
+}

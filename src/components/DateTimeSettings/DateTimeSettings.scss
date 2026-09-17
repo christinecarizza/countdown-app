@@ -1,0 +1,81 @@
+.date-time-settings-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.target-date,
+.target-time,
+.target-timezone {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.show-hide-units {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 46px;
+    height: 24px;
+
+    #show-hide-units {
+        opacity: 0;
+        width: 0;
+        height: 0;
+
+        &:checked + .toggle {
+            background-color: #100e0e;
+        }
+
+        &:checked + .toggle::before {
+            transform: translateX(22px);
+        }
+    }
+
+    .toggle {
+        position: absolute;
+        inset: 0;
+        background-color: #ccc;
+        border-radius: 24px;
+        cursor: pointer;
+        transition: 0.2s;
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 18px;
+            height: 18px;
+            left: 3px;
+            top: 3px;
+            background-color: white;
+            border-radius: 50%;
+            transition: 0.2s;
+        }
+    }
+}
+
+#target-date,
+#target-time,
+#target-timezone {
+    font-family: 'Courier New', monospace;
+    font-weight: 600;
+    font-size: 16px;
+    border: 2px solid #100e0e;
+    border-radius: 6px;
+    padding: 10px 12px;
+    box-sizing: border-box;
+
+    &:focus {
+        outline: none;
+        border-color: #a7a7a7;
+    }
+}
+
+

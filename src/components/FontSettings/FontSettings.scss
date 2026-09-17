@@ -1,0 +1,40 @@
+.font-settings-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.font-color,
+.font-family {
+    display: flex;
+    gap: 5px;
+}
+
+.font-family {
+    flex-direction: column;
+}
+
+.font-color {
+    align-items: center;
+    justify-content: space-between;
+}
+
+#font-color,
+#font-family {
+    font-family: 'Courier New', monospace;
+    font-weight: 600;
+    font-size: 16px;
+    border-radius: 6px;
+    box-sizing: border-box;
+
+    &:focus {
+        outline: none;
+        border-color: #a7a7a7;
+    }
+}
+
+#font-family {
+    border: 2px solid #100e0e;
+    padding: 10px 12px;
+}
