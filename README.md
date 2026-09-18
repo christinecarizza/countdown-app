@@ -1,75 +1,92 @@
-# React + TypeScript + Vite
+# Countdown App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive countdown timer built with **React**, **TypeScript**, and **Vite**.
 
-Currently, two official plugins are available:
+Create a personalized countdown with a target date, time, timezone, custom name, colors, background image, font, and display options.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features
 
-## React Compiler
+* 📅 Set a target date and time
+* 🌎 Select a timezone
+* ✏️ Add a custom countdown name
+* ⏱️ Display days, hours, minutes, and seconds
+* 👁️ Show or hide countdown units
+* 🎨 Customize background and font colors
+* 🖼️ Add a custom background image
+* 🔤 Choose a font family
+* 🖥️ Fullscreen countdown display
+* 📱 Responsive layout for different screen sizes
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Built With
 
-## Expanding the ESLint configuration
+* React
+* TypeScript
+* Vite
+* SCSS
+* Luxon
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Getting Started
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Prerequisites
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+Make sure you have **Node.js** and **npm** installed on your machine.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Clone the repository
 
+```bash
+git clone https://github.com/christinecarizza/countdown-app.git
 ```
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+### Navigate to the project
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```bash
+cd countdown-app
 ```
+
+### Install dependencies
+
+```bash
+npm install
+```
+
+### Start the development server
+
+```bash
+npm run dev
+```
+
+Vite will start the development server and provide a local URL, usually:
+
+```text
+http://localhost:5173
+```
+
+Open the URL in your browser to use the application.
+
+## Project Structure
+
+```text
+countdown-app/
+├── public/
+├── src/
+│   ├── components/
+│   │   ├── BackgroundSettings/
+│   │   ├── CountdownDisplay/
+│   │   ├── DateTimeSettings/
+│   │   ├── FontSettings/
+│   │   ├── Header/
+│   │   └── Name/
+│   ├── pages/
+│   │   └── index.tsx
+│   ├── types/
+│   └── main.tsx
+├── .gitignore
+├── package.json
+├── tsconfig.json
+├── vite.config.ts
+└── README.md
+```
+
+## License
+
+This project is for personal and learning purposes.
