@@ -14,7 +14,6 @@
 
 .show-hide-units {
     display: flex;
-    gap: 5px;
     align-items: center;
     justify-content: space-between;
 }
@@ -35,7 +34,8 @@
         }
 
         &:checked + .toggle::before {
-            transform: translateX(22px);
+            left: calc(100% - 3px);
+            transform: translate(-100%, 0%);
         }
     }
 
