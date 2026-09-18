@@ -7,6 +7,7 @@ import DateTimeSettings from "../components/DateTimeSettings/DateTimeSettings";
 import CountdownDisplay from "../components/CountdownDisplay/CountdownDisplay";
 import BackgroundSettings from "../components/BackgroundSettings/BackgroundSettings";
 import FontSettings from "../components/FontSettings/FontSettings";
+import Footer from "../components/Footer/Footer";
 import "./index.scss";
 
 interface CountdownProps {
@@ -150,6 +151,7 @@ export default function HomePage() {
                     </section>
                 </div>
             </main>
+            <Footer />
         </>
     )
 }
